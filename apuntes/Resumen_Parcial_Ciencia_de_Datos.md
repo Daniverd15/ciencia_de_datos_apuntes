@@ -1,10 +1,8 @@
 # Apuntes de Ciencia de Datos para el parcial teórico
 
-**Base del curso:** repositorio del profesor [`adiacla/Apuntes-Ciencia-de-Datos`](https://github.com/adiacla/Apuntes-Ciencia-de-Datos). Para contrastar y completar los materiales también se consultó [`AndiLinUnab/ciencia-de-datos-apuntes`](https://github.com/AndiLinUnab/ciencia-de-datos-apuntes), el repositorio de un compañero.
+**Base del curso:** repositorio del profesor [`adiacla/Apuntes-Ciencia-de-Datos`](https://github.com/adiacla/Apuntes-Ciencia-de-Datos). Para contrastar los materiales también se consultó [`AndiLinUnab/ciencia-de-datos-apuntes`](https://github.com/AndiLinUnab/ciencia-de-datos-apuntes), el repositorio de un compañero.
 
-**Alcance de estos apuntes:** explicación personal de los conceptos de los cuadernos de clase. En la copia consultada del repositorio del profesor estaban las carpetas `Perceptron`, `Redes densas`, `imagenes` y `taller`; los cuadernos de procesamiento digital de imágenes y CNN se revisaron desde los archivos adjuntos y la copia del compañero. Los repositorios son fuentes de estudio, no se presenta este archivo como historial original de cambios en ellos.
-
-La guía integra los temas y ejemplos de los materiales consultados. Los cuadernos de imágenes 6, 7 y 8 se trabajaron con los archivos compartidos en clase; algunas explicaciones y advertencias se añadieron para que los conceptos queden claros y para distinguir inconsistencias de comentarios del notebook.
+**Alcance de estos apuntes:** explicación de los conceptos de cada cuaderno de clase, en el orden en que conviene estudiarlos. Los cuadernos de imágenes 6, 7 y 8 se trabajaron con los archivos compartidos en clase. Cuando un comentario de un cuaderno no coincide con lo que hace el código, se indica con una advertencia.
 
 > El README de `Redes densas/` dice que los temas del quiz son: **las 3 formas de declarar modelos en Keras (model_a, model_b, model_c)**, el flujo **`.compile()` → `.fit()` → evaluación** y el manejo de **`input_shape`** (`(1000, 20)` en el ejemplo sintético y `(12,)` en Celsius→Fahrenheit). Estúdialos primero.
 
@@ -16,19 +14,18 @@ La guía integra los temas y ejemplos de los materiales consultados. Los cuadern
 |---|---|---|
 | 1 | `Perceptron/Readme.md` | Perceptrón, regla de actualización, SSE vs MSE, SGD/Batch/Mini-batch, descenso del gradiente y funciones de activación |
 | 2 | `Perceptron/Avanzada_Cuaderno_1_ANN_El_Perceptron.ipynb` | Perceptrón manual (alumnos: Nota IA vs PGA) + `sklearn.linear_model.Perceptron` |
-| 3 | `Perceptron/Cuanderno_1_1_Perceptron_con_Sklearn.ipynb` | Perceptrón con sklearn sobre `pacientes.csv` (edad, colesterol → problema cardíaco), MinMaxScaler, accuracy y **recall** |
-| 4 | `Perceptron/MLP Circulo concetricos.ipynb` | `MLPClassifier` (16, 8, 4) sobre círculos concéntricos (células malignas y benignas) |
+| 3 | `Perceptron/Cuanderno_1_1_Perceptron_con_Sklearn_ipynb (1).ipynb` | Perceptrón con sklearn sobre `pacientes.csv` (edad, colesterol → problema cardíaco), MinMaxScaler, accuracy y **recall** |
+| 4 | `Perceptron/MLP Circuitos concentricos.ipynb` | `MLPClassifier` (16, 8, 4) sobre círculos concéntricos (células malignas y benignas) |
 | 5 | `Perceptron/Avanzada_Cuaderno_2_...keras_tensorflow.ipynb` | Keras, PyTorch, TensorFlow y sklearn; tensores, softmax, `GradientTape`, `@tf.function`, `tf.Module`, SavedModel, entrenamiento manual y con Keras |
 | 6 | `Redes densas/Readme.md` | Guía de estudio: modelos secuenciales y **temas del examen** |
 | 7 | `Redes densas/Avanzada_Cuaderno_3_...regresion_lineal_Ejemplo.ipynb` | Teoría: 3 formas de declarar la red, summary/pesos, compile, fit, history, evaluate/predict **+** Celsius→Fahrenheit |
 | 8 | `Redes densas/Avanzada_Cuaderno_4_...(Redes_densas).ipynb` | Activaciones, pérdidas, pérdida vs métrica, activación lineal por defecto, batch, tamaño de capas, train/val/test, overfitting, EarlyStopping **+** práctica `make_circles` |
-| 9 | `Redes densas/Avanzada_Cuaderno_5_Regresion_Aplicación_Gasolina.ipynb` | Regresión con Auto-MPG (consumo de gasolina) con una red densa |
-| 10 | `Redes densas/Reconocimiento de prendas.ipynb` | Fashion-MNIST: Flatten + Dense + Softmax (multiclase) |
-| 11 | `Redes densas/Configuración de la red neuronal.ipynb` | Solo configuración del entorno: montar Drive, versiones, `nvidia-smi` |
-| 12 | `procesamiento de imagenes/Avanzada Cuaderno 6 CNN Procesamiento digital de imágenes.ipynb` (archivo de clase / copia complementaria) | Imágenes como arreglos, OpenCV, canales, escala de grises, **convolución/kernels**, filtros, Sobel, segmentación (umbral, Otsu, K-Means), contornos |
-| 13 | `taller/` (`procesamiento.py`, `app.py`) | Pipeline completo: limpieza, estandarización Z-score ×2, JSON para el *playground*, red escrita a mano y app en **Streamlit** |
-| 14 | `Avanzada_Cuaderno_7_CNN_Redes_Neuronales_Convolucionales_.ipynb` (archivo de clase / copia del compañero) | CNN desde cero para clasificación multiclase con CIFAR-10: convolución, pooling, logits, pérdida, evaluación y predicción |
-| 15 | `Avanzada Cuaderno 8 CNN Transferencia de aprendizaje.ipynb` (archivo de clase / copia del compañero) | Transfer learning con VGG16, extracción de características, congelar/descongelar capas, aumento de datos y clasificación de gatos y perros |
+| 9 | `Redes densas/Cuaderno_Avanzado_5_Regresion_Aplicacion_Gasolina.ipynb` | Regresión con Auto-MPG (consumo de gasolina) con una red densa |
+| 10 | `Redes densas/Reconocimiento de prendas/` (`introduccion keras.ipynb`, `app.py`) | Fashion-MNIST: Flatten + Dense + Softmax (multiclase) y app en Streamlit |
+| 11 | `procesamiento de imagenes/Avanzada Cuaderno 6  CNN  Procesamiento digital de imágenes.ipynb` | Imágenes como arreglos, OpenCV, canales, escala de grises, **convolución/kernels**, filtros, Sobel, segmentación (umbral, Otsu, K-Means), contornos |
+| 12 | `procesamiento de imagenes/Avanzada_Cuaderno_7_CNN_Redes_Neuronales_Convolucionales_.ipynb` | CNN desde cero para clasificación multiclase con CIFAR-10: convolución, pooling, logits, pérdida, evaluación y predicción |
+| 13 | `procesamiento de imagenes/Avanzada Cuaderno 8 CNN Transferencia de aprendizaje.ipynb` | Transfer learning con VGG16, extracción de características, congelar/descongelar capas, aumento de datos y clasificación de gatos y perros |
+| 14 | `taller/` (`procesamiento.py`, `app.py`) | Pipeline completo: limpieza, estandarización Z-score ×2, JSON para el *playground*, red escrita a mano y app en **Streamlit** |
 
 ---
 
