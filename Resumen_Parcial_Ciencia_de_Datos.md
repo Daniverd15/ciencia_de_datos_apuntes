@@ -1,4 +1,4 @@
-# Resumen extendido — Parcial teórico de Ciencia de Datos
+# Apuntes de Ciencia de Datos para el parcial teórico
 
 **Base del curso:** repositorio del profesor [`adiacla/Apuntes-Ciencia-de-Datos`](https://github.com/adiacla/Apuntes-Ciencia-de-Datos). Para contrastar y completar los materiales también se consultó [`AndiLinUnab/ciencia-de-datos-apuntes`](https://github.com/AndiLinUnab/ciencia-de-datos-apuntes), el repositorio de un compañero.
 
@@ -25,7 +25,7 @@ La guía integra los temas y ejemplos de los materiales consultados. Los cuadern
 | 9 | `Redes densas/Avanzada_Cuaderno_5_Regresion_Aplicación_Gasolina.ipynb` | Regresión con Auto-MPG (consumo de gasolina) con una red densa |
 | 10 | `Redes densas/Reconocimiento de prendas.ipynb` | Fashion-MNIST: Flatten + Dense + Softmax (multiclase) |
 | 11 | `Redes densas/Configuración de la red neuronal.ipynb` | Solo configuración del entorno: montar Drive, versiones, `nvidia-smi` |
-| 12 | `Redes densas/Avanzada Cuaderno 6 CNN Procesamiento digital de imágenes.ipynb` | Imágenes como arreglos, OpenCV, canales, escala de grises, **convolución/kernels**, filtros, Sobel, segmentación (umbral, Otsu, K-Means), contornos |
+| 12 | `procesamiento de imagenes/Avanzada Cuaderno 6 CNN Procesamiento digital de imágenes.ipynb` (archivo de clase / copia complementaria) | Imágenes como arreglos, OpenCV, canales, escala de grises, **convolución/kernels**, filtros, Sobel, segmentación (umbral, Otsu, K-Means), contornos |
 | 13 | `taller/` (`procesamiento.py`, `app.py`) | Pipeline completo: limpieza, estandarización Z-score ×2, JSON para el *playground*, red escrita a mano y app en **Streamlit** |
 | 14 | `Avanzada_Cuaderno_7_CNN_Redes_Neuronales_Convolucionales_.ipynb` (archivo de clase / copia del compañero) | CNN desde cero para clasificación multiclase con CIFAR-10: convolución, pooling, logits, pérdida, evaluación y predicción |
 | 15 | `Avanzada Cuaderno 8 CNN Transferencia de aprendizaje.ipynb` (archivo de clase / copia del compañero) | Transfer learning con VGG16, extracción de características, congelar/descongelar capas, aumento de datos y clasificación de gatos y perros |
