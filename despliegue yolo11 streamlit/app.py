@@ -42,7 +42,7 @@ with st.sidebar:
     tamano = st.radio("Tamano", ["n", "s"], format_func=lambda x: {"n": "n (nano)", "s": "s (small)"}[x], horizontal=True, key="tamano")
     tarea = st.radio("Tarea", list(TAREAS), key="tarea")
     nombre = f"yolo11{tamano}{TAREAS[tarea]}"
-    conf = st.slider("Confianza minima", 0.05, 0.95, 0.25, 0.05)
+    conf = st.slider("Confianza minima", 0.05, 0.95, 0.25, 0.05, key="conf")
     iou = st.slider("IoU (NMS)", 0.1, 0.9, 0.7, 0.05)
     st.divider()
     m = metricas().get(nombre)
@@ -60,7 +60,7 @@ if not (MODELOS / f"{nombre}.pt").exists():
 
 modelo = cargar(nombre)
 
-origen = st.radio("Origen de la imagen", ["Subir archivo", "Camara"], horizontal=True)
+origen = st.radio("Origen de la imagen", ["Subir archivo", "Camara"], horizontal=True, key="origen")
 if origen == "Subir archivo":
     archivo = st.file_uploader("Imagen del vehiculo", type=["jpg", "jpeg", "png", "webp"])
 else:
