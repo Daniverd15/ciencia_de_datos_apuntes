@@ -39,8 +39,8 @@ st.caption("Ciencia de Datos - UNAB. Modelos YOLO11 n y s entrenados con el data
 
 with st.sidebar:
     st.header("Modelo")
-    tamano = st.radio("Tamano", ["n", "s"], format_func=lambda x: {"n": "n (nano)", "s": "s (small)"}[x], horizontal=True)
-    tarea = st.radio("Tarea", list(TAREAS))
+    tamano = st.radio("Tamano", ["n", "s"], format_func=lambda x: {"n": "n (nano)", "s": "s (small)"}[x], horizontal=True, key="tamano")
+    tarea = st.radio("Tarea", list(TAREAS), key="tarea")
     nombre = f"yolo11{tamano}{TAREAS[tarea]}"
     conf = st.slider("Confianza minima", 0.05, 0.95, 0.25, 0.05)
     iou = st.slider("IoU (NMS)", 0.1, 0.9, 0.7, 0.05)
@@ -76,9 +76,9 @@ with st.spinner("Analizando..."):
 
 c1, c2 = st.columns(2)
 c1.subheader("Original")
-c1.image(imagen, use_container_width=True)
+c1.image(imagen, width="stretch")
 c2.subheader(f"Resultado ({tarea.lower()})")
-c2.image(r.plot()[:, :, ::-1], use_container_width=True)
+c2.image(r.plot()[:, :, ::-1], width="stretch")
 
 n = len(r.boxes)
 st.subheader(f"Danos detectados: {n}")
@@ -89,8 +89,8 @@ if n:
         fila = {"#": i + 1, "Clase": r.names[int(b.cls)], "Confianza": round(float(b.conf), 3),
                 "Caja (x1,y1,x2,y2)": f"{x1},{y1},{x2},{y2}"}
         if r.masks is not None:
-            fila["Area mascara (% imagen)"] = round(float(r.masks.data[i].mean()) * 100, 2)
+            fila["Area mascara (% imagen)"] = round(float(r.masks.data[i].float().mean()) * 100, 2)
         filas.append(fila)
-    st.dataframe(pd.DataFrame(filas), use_container_width=True, hide_index=True)
+    st.dataframe(pd.DataFrame(filas), width="stretch", hide_index=True)
 else:
     st.success("No se detectaron danos con esta confianza. Prueba a bajar el umbral.")

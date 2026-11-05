@@ -1,4 +1,4 @@
 ultralytics>=8.3
-streamlit>=1.40
+streamlit>=1.50
 pandas
 pillow
