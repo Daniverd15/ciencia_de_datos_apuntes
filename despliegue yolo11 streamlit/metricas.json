@@ -1,0 +1,60 @@
+{
+  "yolo11n": {
+    "metrics/precision(B)": 0.791,
+    "metrics/recall(B)": 0.2926,
+    "metrics/mAP50(B)": 0.3461,
+    "metrics/mAP50-95(B)": 0.26,
+    "fitness": 0.26
+  },
+  "yolo11n-seg": {
+    "metrics/precision(B)": 0.7397,
+    "metrics/recall(B)": 0.3078,
+    "metrics/mAP50(B)": 0.3548,
+    "metrics/mAP50-95(B)": 0.26,
+    "metrics/precision(M)": 0.6946,
+    "metrics/recall(M)": 0.283,
+    "metrics/mAP50(M)": 0.3164,
+    "metrics/mAP50-95(M)": 0.2017,
+    "fitness": 0.4616
+  },
+  "yolo11n-pose": {
+    "metrics/precision(B)": 0.6811,
+    "metrics/recall(B)": 0.2911,
+    "metrics/mAP50(B)": 0.3294,
+    "metrics/mAP50-95(B)": 0.2375,
+    "metrics/precision(P)": 0.6774,
+    "metrics/recall(P)": 0.2971,
+    "metrics/mAP50(P)": 0.3405,
+    "metrics/mAP50-95(P)": 0.2249,
+    "fitness": 0.4624
+  },
+  "yolo11s": {
+    "metrics/precision(B)": 0.6478,
+    "metrics/recall(B)": 0.3291,
+    "metrics/mAP50(B)": 0.3597,
+    "metrics/mAP50-95(B)": 0.2726,
+    "fitness": 0.2726
+  },
+  "yolo11s-seg": {
+    "metrics/precision(B)": 0.648,
+    "metrics/recall(B)": 0.3413,
+    "metrics/mAP50(B)": 0.3708,
+    "metrics/mAP50-95(B)": 0.2751,
+    "metrics/precision(M)": 0.5899,
+    "metrics/recall(M)": 0.3195,
+    "metrics/mAP50(M)": 0.3366,
+    "metrics/mAP50-95(M)": 0.2171,
+    "fitness": 0.4922
+  },
+  "yolo11s-pose": {
+    "metrics/precision(B)": 0.6469,
+    "metrics/recall(B)": 0.3259,
+    "metrics/mAP50(B)": 0.3466,
+    "metrics/mAP50-95(B)": 0.2518,
+    "metrics/precision(P)": 0.6446,
+    "metrics/recall(P)": 0.3376,
+    "metrics/mAP50(P)": 0.365,
+    "metrics/mAP50-95(P)": 0.2517,
+    "fitness": 0.5035
+  }
+}
