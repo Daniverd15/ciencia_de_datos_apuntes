@@ -32,9 +32,11 @@ ciencia_de_datos_apuntes/
 ├── Perceptron/                   Cuadernos 1, 1.1 y 2 + MLP con scikit-learn
 ├── Redes densas/                 Cuadernos 3, 4 y 5
 │   └── Reconocimiento de prendas/    Fashion-MNIST: cuaderno, modelo y app
-├── procesamiento de imagenes/    Cuadernos 6, 7 y 8 (imágenes y CNN)
+├── procesamiento de imagenes/    Cuadernos 6, 7, 8 y 9 (imágenes y CNN)
+├── despliegue yolo11 streamlit/  6 modelos YOLO11 (detección, segmentación, pose) + app
 ├── taller/                       Taller: del dato a una app en Streamlit
-└── imagenes/                     Figuras usadas en las guías
+└── imagenes/                     Figuras de las guías
+    └── cuadernos/                Resultados extraídos de los cuadernos
 ```
 
 ## Ruta de estudio
@@ -52,7 +54,19 @@ ciencia_de_datos_apuntes/
 | 6 | Procesamiento de imágenes | [Cuaderno 6](<procesamiento de imagenes/Avanzada Cuaderno 6  CNN  Procesamiento digital de imágenes.ipynb>) | Imágenes como arreglos, canales de color, convolución y kernels, filtros, Sobel, segmentación y contornos |
 | 7 | Redes convolucionales | [Cuaderno 7](<procesamiento de imagenes/Avanzada_Cuaderno_7_CNN_Redes_Neuronales_Convolucionales_.ipynb>) | CNN desde cero sobre CIFAR-10: capas `Conv2D`, pooling, aumento de datos, evaluación y predicción |
 | 8 | Transferencia de aprendizaje | [Cuaderno 8](<procesamiento de imagenes/Avanzada Cuaderno 8 CNN Transferencia de aprendizaje.ipynb>) | Modelos preentrenados (VGG16), extracción de características, congelar y descongelar capas, *fine-tuning* |
+| 9 | Convolución paso a paso | [Cuaderno 9](<procesamiento de imagenes/Avanzada_Cuaderno_9_Convolucion.ipynb>) | Filtros Sobel 3 × 3 y *max pooling* 2 × 2 implementados con NumPy y SciPy sobre una foto |
+| — | Visión por computador con YOLO11 | [despliegue yolo11 streamlit/](<despliegue yolo11 streamlit>) | Entrenamiento de 6 modelos YOLO11 (n y s) para daños en carros y despliegue en Streamlit |
 | — | Taller integrador | [taller/](taller) | Limpieza y estandarización de datos, exportación a JSON y despliegue de una red en Streamlit |
+
+## Vista previa
+
+| Perceptrón (cuaderno 1) | Redes densas (cuaderno 4) | CNN en CIFAR-10 (cuaderno 7) |
+|:---:|:---:|:---:|
+| <img src="imagenes/cuadernos/c1_perceptron_frontera.png" width="260"> | <img src="imagenes/cuadernos/c4_multicapa.png" width="230"> | <img src="imagenes/cuadernos/c7_accuracy.png" width="260"> |
+| **Segmentación K-Means (cuaderno 6)** | **Filtros (cuaderno 6)** | **Taller en Streamlit** |
+| <img src="imagenes/cuadernos/c6_kmeans.png" width="260"> | <img src="imagenes/cuadernos/c6_filtros.png" width="260"> | <img src="imagenes/taller_app.png" width="200"> |
+
+Cada guía (`Readme.md` de cada carpeta) muestra los resultados de sus cuadernos con más detalle.
 
 ## Libro de apuntes
 
@@ -76,11 +90,14 @@ git clone https://github.com/Daniverd15/ciencia_de_datos_apuntes.git
 cd ciencia_de_datos_apuntes
 python -m venv .venv
 .venv\Scripts\activate        # En Linux/macOS: source .venv/bin/activate
-pip install jupyter numpy pandas matplotlib seaborn scikit-learn tensorflow opencv-python scikit-image
+pip install jupyter numpy pandas matplotlib seaborn scikit-learn scipy tensorflow opencv-python scikit-image pillow kagglehub
 jupyter notebook
 ```
 
-> El cuaderno 6 usa las imágenes que están en su misma carpeta. Algunas celdas de los cuadernos 6, 7 y 8 apuntan a rutas de Colab (`/content/...`); en local hay que ajustarlas a la ruta del archivo.
+> - Requiere **Python 3.10 – 3.13** (TensorFlow 2.20 no está disponible para Python 3.14).
+> - Los cuadernos descargan sus propios datos (con `curl`, `wget`, Keras o `kagglehub`), así que necesitan internet.
+> - Algunas celdas de los cuadernos 6, 7 y 8 apuntan a rutas de Colab (`/content/...`); en local cámbialas por el nombre del archivo (por ejemplo, `/content/logo.jpg` → `logo.jpg`).
+> - Para los cuadernos 7 y 8, que entrenan redes convolucionales, conviene Colab con GPU (*Entorno de ejecución → Cambiar tipo de entorno → GPU T4*).
 
 ### Aplicaciones en Streamlit
 
@@ -100,6 +117,16 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+Detección de daños en carros con YOLO11 (instala PyTorch y Ultralytics, ~1 GB):
+
+```bash
+cd "despliegue yolo11 streamlit"
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+> Instala cada app en su propio entorno virtual (`python -m venv .venv`) para que sus dependencias no choquen. Todas se abren en **http://localhost:8501**.
+
 ## Tecnologías
 
 | Área | Herramientas |
@@ -109,6 +136,7 @@ streamlit run app.py
 | Aprendizaje automático | scikit-learn |
 | Aprendizaje profundo | TensorFlow, Keras |
 | Imágenes | OpenCV, Pillow, scikit-image |
+| Visión por computador | Ultralytics YOLO11, PyTorch |
 | Despliegue | Streamlit, joblib |
 
 ## Fuentes y créditos
@@ -116,6 +144,6 @@ streamlit run app.py
 - Los cuadernos numerados y las guías de `Perceptron/` y `Redes densas/` son material del curso, elaborado por el profesor Alfredo Antonio Díaz Claro: [adiacla/Apuntes-Ciencia-de-Datos](https://github.com/adiacla/Apuntes-Ciencia-de-Datos).
 - Los cuadernos 6, 7 y 8 y sus archivos de apoyo corresponden a los compartidos en clase.
 - Para contrastar los apuntes también se consultó el repositorio de un compañero del curso: [AndiLinUnab/ciencia-de-datos-apuntes](https://github.com/AndiLinUnab/ciencia-de-datos-apuntes).
-- Los conjuntos de datos pertenecen a sus respectivos autores: Auto-MPG (UCI Machine Learning Repository), Fashion-MNIST (Zalando Research) y CIFAR-10 (Universidad de Toronto).
+- Los conjuntos de datos pertenecen a sus respectivos autores: Auto-MPG (UCI Machine Learning Repository), Fashion-MNIST (Zalando Research), CIFAR-10 (Universidad de Toronto), Cats vs. Dogs filtrado (Google) y `cicatriz/danocarro` (Roboflow Universe, CC BY 4.0).
 
 Este repositorio tiene fines exclusivamente académicos.

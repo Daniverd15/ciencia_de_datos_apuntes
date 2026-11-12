@@ -80,3 +80,45 @@ Para ejecutar y experimentar con el código localmente con VsC o en Google Colab
 * Librerías: `tensorflow`, `numpy`, `matplotlib`
 
 ¡Abre el cuaderno, ejecuta las celdas en orden, analiza cada sección y prepárate para el quiz!
+
+---
+
+## Cuadernos de esta carpeta y resultados
+
+| Cuaderno | Tema |
+|---|---|
+| [Cuaderno 3](<Avanzada_Cuaderno_3_ANN_Red_neuronal_básica_de_regresion_lineal_Ejemplo.ipynb>) | Tres formas de declarar un modelo en Keras y una neurona que aprende a convertir Celsius → Fahrenheit |
+| [Cuaderno 4](<Avanzada_Cuaderno_4_ANN_Red_Neuronal_Clasificación_(Redes_densas).ipynb>) | Funciones de activación y de pérdida, y clasificación de círculos concéntricos con redes densas |
+| [Cuaderno 5](Cuaderno_Avanzado_5_Regresion_Aplicacion_Gasolina.ipynb) | Regresión del consumo de gasolina (millas por galón) con el conjunto Auto-MPG |
+| [Reconocimiento de prendas](<Reconocimiento de prendas>) | Fashion-MNIST con una red densa y una app de Streamlit |
+
+**Cuaderno 3 — Celsius a Fahrenheit**
+
+| Datos de entrenamiento | La pérdida baja durante 1000 épocas |
+|:---:|:---:|
+| <img src="../imagenes/cuadernos/c3_celsius_datos.png" width="380"> | <img src="../imagenes/cuadernos/c3_perdida.png" width="380"> |
+
+**Cuaderno 4 — una capa contra varias capas**
+
+| Datos | Una sola capa (frontera lineal) | Varias capas (frontera circular) |
+|:---:|:---:|:---:|
+| <img src="../imagenes/cuadernos/c4_circulos.png" width="260"> | <img src="../imagenes/cuadernos/c4_una_capa.png" width="260"> | <img src="../imagenes/cuadernos/c4_multicapa.png" width="260"> |
+
+Con una sola capa la red solo puede trazar una recta y no separa los círculos; al añadir capas ocultas con ReLU aprende una frontera cerrada. La arquitectura final del cuaderno:
+
+<p align="center"><img src="../imagenes/cuadernos/c4_arquitectura.png" width="300" alt="Arquitectura 3 → 8 → 4 → 1"></p>
+
+**Cuaderno 5 — correlación entre variables de Auto-MPG**
+
+<p align="center"><img src="../imagenes/cuadernos/c5_correlacion.png" width="480" alt="Mapa de correlación de Auto-MPG"></p>
+
+El consumo (`mpg`) tiene una correlación fuerte y negativa con el peso, la cilindrada, los caballos de fuerza y los cilindros: los carros más pesados y potentes recorren menos millas por galón.
+
+## Cómo ejecutarlos
+
+Ábrelos en Google Colab y ejecuta las celdas en orden. El cuaderno 5 descarga Auto-MPG desde Kaggle con `kagglehub` (`uciml/autompg-dataset`); funciona sin iniciar sesión. En local:
+
+```bash
+pip install jupyter numpy pandas matplotlib seaborn scikit-learn tensorflow kagglehub
+jupyter notebook
+```

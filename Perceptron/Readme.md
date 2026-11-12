@@ -258,3 +258,27 @@ $$
 > * **Softmax:** Utilizada en la capa de salida para problemas de **clasificación multiclase**.
 >
 > **¡Todas estas funciones las veremos y analizaremos en detalle más adelante!**
+
+---
+
+## Resultados en los cuadernos de esta carpeta
+
+| Cuaderno | Qué se ve |
+|---|---|
+| [Cuaderno 1](Avanzada_Cuaderno_1_ANN_El_Perceptron.ipynb) | Un perceptrón entrenado a mano con NumPy separa estudiantes que **se gradúan** de los que **se retiran** según su nota de IA y su PGA. |
+| [Cuaderno 1.1](<Cuanderno_1_1_Perceptron_con_Sklearn_ipynb (1).ipynb>) | `sklearn.linear_model.Perceptron` sobre `pacientes.csv` (edad y colesterol → problema cardíaco, descargado desde GitHub), con escalado `MinMaxScaler` y métricas *accuracy* y *recall*. |
+| [MLP círculos concéntricos](<MLP Circuitos concentricos.ipynb>) | Un `MLPClassifier` resuelve datos que **no** son linealmente separables, donde el perceptrón simple falla. |
+| [Cuaderno 2](Avanzada_Cuaderno_2_ANN_Red_Neuronal_sklearn_keras_tensorflow.ipynb) | Tensores, funciones sigmoide y softmax y diferenciación automática en TensorFlow y Keras. |
+
+| Frontera de decisión del perceptrón (cuaderno 1) | Datos de círculos concéntricos (MLP) |
+|:---:|:---:|
+| <img src="../imagenes/cuadernos/c1_perceptron_frontera.png" width="420"> | <img src="../imagenes/cuadernos/mlp_circulos.png" width="380"> |
+
+## Cómo ejecutarlos
+
+- **Google Colab:** abre el cuaderno desde GitHub (*Archivo → Abrir cuaderno → GitHub*) y ejecuta las celdas en orden. No necesitan GPU.
+- **Local:**
+  ```bash
+  pip install jupyter numpy pandas matplotlib scikit-learn tensorflow
+  jupyter notebook
+  ```
