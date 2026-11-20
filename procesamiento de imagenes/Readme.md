@@ -7,7 +7,11 @@ Cuadernos 6 a 9 del curso: de la imagen como matriz de números hasta las redes 
 | [Cuaderno 6](<Avanzada Cuaderno 6  CNN  Procesamiento digital de imágenes.ipynb>) | Procesamiento digital de imágenes: imágenes como arreglos, canales de color, convolución y kernels, filtros, detección de bordes, umbralización, segmentación y contornos | `logo.jpg`, `motinor.jpg` y la imagen de Fortnite: el cuaderno los descarga con `curl` y también están en esta carpeta |
 | [Cuaderno 7](Avanzada_Cuaderno_7_CNN_Redes_Neuronales_Convolucionales_.ipynb) | CNN desde cero sobre CIFAR-10: capas `Conv2D` y de pooling, entrenamiento, evaluación y predicción sobre una foto de internet (un avión) | CIFAR-10 (`datasets.cifar10.load_data()`, ~170 MB) |
 | [Cuaderno 8](<Avanzada Cuaderno 8 CNN Transferencia de aprendizaje.ipynb>) | Aprendizaje por transferencia con VGG16: clasificación con el modelo preentrenado, extracción de características, congelar capas y *fine-tuning* | `imagenesvgg16.zip` (perro, bus, vaso) y `cats_and_dogs_filtered.zip` de Google, ambos descargados por el cuaderno |
+| [Cuaderno 8 A2](<Avanzada_Cuaderno_8_A2_CNN_neuronales_convolucionales_Números_Modo_2_(Uso_de_RNC).ipynb>) | CNN para reconocer dígitos escritos a mano: arquitectura, entrenamiento con `EarlyStopping`, guardado del modelo y de sus pesos, y predicción sobre una imagen descargada | MNIST (`datasets.mnist.load_data()`) y `numero9.jpg` |
 | [Cuaderno 9](Avanzada_Cuaderno_9_Convolucion.ipynb) | Convolución Sobel 3 × 3 y *max pooling* 2 × 2 paso a paso con NumPy y SciPy | `gato.JPG` (se descarga con `curl` en el cuaderno) |
+| [Cuaderno 9 · Taller aplicado](<Avanzada_Cuaderno_9_CNN_Taller_aplicado_Clasificación_de_imagenes_con_Tensorflow_y_Keras.ipynb>) | Clasificación de flores con `image_dataset_from_directory`, `Rescaling`, diagnóstico del sobreajuste, aumento de datos (`RandomFlip`, `RandomRotation`, `RandomZoom`), `Dropout` y conversión a TensorFlow Lite | `flower_photos.tgz` (5 clases, ~220 MB) |
+
+La continuación de estos temas, con detección de objetos, segmentación y puntos clave, está en [`deteccion de objetos/`](<../deteccion de objetos>).
 
 ## Cómo ejecutarlos
 
